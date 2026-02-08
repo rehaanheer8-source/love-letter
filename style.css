@@ -1,81 +1,110 @@
-body {
+* {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(to bottom, #ffd6e0, #fff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
+body {
+  background: #ffe6ec;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
 .container {
   text-align: center;
 }
 
+/* Envelope */
 .envelope {
   position: relative;
-  width: 320px;
-  height: 220px;
+  width: 280px;
+  height: 180px;
+  background: #ff8fa3;
+  border-radius: 10px;
+  overflow: hidden;
   margin: auto;
-  perspective: 800px;
 }
 
+/* Back */
 .back {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #ff8fab;
-  border-radius: 8px;
+  background: #ff8fa3;
+  z-index: 1;
 }
 
+/* Letter */
+.letter {
+  position: absolute;
+  width: 90%;
+  height: 150px;
+  background: white;
+  top: 20px;
+  left: 5%;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+
+  opacity: 0;
+  transform: translateY(0);
+  transition: 1s ease;
+  z-index: 2;
+}
+
+/* Front */
 .front {
   position: absolute;
   width: 100%;
   height: 100%;
   background: #ff6f91;
-  clip-path: polygon(0 0, 100% 0, 50% 65%);
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+  z-index: 3;
 }
 
+/* Top Flap */
 .top {
   position: absolute;
   width: 100%;
   height: 100%;
   background: #ff4d6d;
-  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
   transform-origin: top;
-  transition: transform 1s ease;
+  transition: 1s ease;
+  z-index: 4;
 }
 
-.letter {
-  position: absolute;
-  width: 90%;
-  height: 85%;
-  background: white;
-  top: 100%;
-  left: 5%;
-  padding: 18px;
-  border-radius: 6px;
-  box-sizing: border-box;
-  transition: all 1s ease;
-  opacity: 0;
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
 }
+
+button:hover {
+  background: #e63956;
+}
+
+/* =====================
+   OPEN ANIMATION
+===================== */
 
 .envelope.open .top {
   transform: rotateX(180deg);
 }
 
 .envelope.open .letter {
-  top: -20px;
+  transform: translateY(-170px);
   opacity: 1;
-}
-
-button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  border: none;
-  background: #ff4d6d;
-  color: white;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
 }
