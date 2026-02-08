@@ -1,20 +1,23 @@
 body {
-  background: #fde2e4;
+  margin: 0;
   height: 100vh;
+  background: linear-gradient(to bottom, #ffd6e0, #fff);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-.wrapper {
+.container {
   text-align: center;
 }
 
 .envelope {
   position: relative;
   width: 320px;
-  height: 210px;
+  height: 220px;
+  margin: auto;
+  perspective: 800px;
 }
 
 .back {
@@ -40,27 +43,21 @@ body {
   background: #ff4d6d;
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   transform-origin: top;
-  transition: transform 0.6s ease;
+  transition: transform 1s ease;
 }
 
 .letter {
   position: absolute;
   width: 90%;
   height: 85%;
-  background: #fff;
+  background: white;
   top: 100%;
   left: 5%;
-  padding: 15px;
-  box-sizing: border-box;
+  padding: 18px;
   border-radius: 6px;
-  transition: top 0.6s ease;
-  text-align: left;
-  font-size: 14px;
-}
-
-.letter span {
-  color: #ff4d6d;
-  font-weight: bold;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  opacity: 0;
 }
 
 .envelope.open .top {
@@ -68,19 +65,17 @@ body {
 }
 
 .envelope.open .letter {
-  top: 12px;
-}
-
-.btns {
-  margin-top: 18px;
+  top: -20px;
+  opacity: 1;
 }
 
 button {
-  padding: 8px 18px;
-  margin: 0 6px;
+  margin-top: 25px;
+  padding: 12px 25px;
   border: none;
   background: #ff4d6d;
   color: white;
-  border-radius: 20px;
+  border-radius: 25px;
+  font-size: 16px;
   cursor: pointer;
 }
