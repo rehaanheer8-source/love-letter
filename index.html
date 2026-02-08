@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For You ❤️</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Special Love Letter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="container">
-  <div class="envelope" id="envelope">
-    <div class="back"></div>
-
-    <div class="letter" id="letter">
-      <p>
-        3 saal pehle hum sirf ek kahani the,<br><br>
-
-        aaj tum meri aadat, meri sukoon, meri duniya ho.<br><br>
-
-        Har ups & downs me tumne mera haath nahi chhoda,<br><br>
-
-        <b>kya tum zindagi bhar mera saath dogi?</b><br><br>
-
-        ❤️ Will you be mine forever? ❤️
-      </p>
+    <div class="envelope-wrapper">
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="card">
+                <div class="letter-content">
+                    <p>My Dearest,</p>
+                    <p>3 saal pehle, mujhe kya pata tha ki ek choti si mulakat meri duniya badal degi. Tum meri zindagi ki sabse khoobsurat kitaab ka pehla panna ho, aur main har roz tumhare saath ek naya chapter likhna chahta hoon.</p>
+                    <p>Tum sirf meri dost nahi, meri saathi ho, meri khushi ho. Tumhari hansi meri subah aur tumhara saath meri har sham ko behtar bana deta hai. Meri duniya ho tum.</p>
+                    <p>Hamesha tumhara,</p>
+                    <p class="signature">Rehaan</p>
+                </div>
+            </div>
+            <div class="envelope-back"></div>
+        </div>
+        <button class="open-button">Open My Heart 💌</button>
     </div>
 
-    <div class="front"></div>
-    <div class="top"></div>
-  </div>
+    <audio id="background-music" loop>
+        <source src="your-romantic-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-  <button onclick="openLetter()">Open My Heart 💌</button>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
